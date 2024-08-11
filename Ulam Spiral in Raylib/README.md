@@ -62,7 +62,7 @@ used to draw spiral
 To start programming our functions, we first need to recall __how Raylib displays pixels__.
 
 
-<img src="Resources/raylib-coordinates.png" alt="drawing" width="30%"/>
+<img src="Resources/raylib-coordinates.png" alt="drawing" width="50%"/>
 
 There are two things to keep in mind:
 
@@ -80,7 +80,7 @@ This informations will be later important in programming functions.
 
 First let's look at the Ulam spiral and its mathematical relations
 
-<img src="Resources/ulam-spiral-draw.png" alt="drawing" width="80%"/>
+<img src="Resources/ulam-spiral-draw.png" alt="drawing" width="50%"/>
 
 
 
@@ -91,7 +91,7 @@ First let's look at the Ulam spiral and its mathematical relations
 
 Notice that each time we return to the vertical (or horizontal) line, its length is increased by 1 number.
 
-<img src="Resources/ulam-spiral-draw-with-relation.png" alt="drawing" width="80%"/>
+<img src="Resources/ulam-spiral-draw-with-relation.png" alt="drawing" width="50%"/>
 
 
 ```c++
