@@ -76,15 +76,12 @@ This informations will be later important in programming functions.
 
 
 ### GenerateSpiral Function Programming
+<br>
 
 
 First let's look at the Ulam spiral and its mathematical relations
 
 <img src="Resources/ulam-spiral-draw.png" alt="drawing" width="50%"/>
-
-
-
-
 
 <br><br>
 
@@ -93,11 +90,16 @@ Notice that each time we return to the vertical (or horizontal) line, its length
 
 <img src="Resources/ulam-spiral-draw-with-relation.png" alt="drawing" width="50%"/>
 
+<br><br>
+
+
+With this observation we can define two variables to track vertical and horizontal line length
 
 ```c++
-class Spiral{
-    private:
+int vertical = 2, horizontal = 2;
+``` 
+<br>
 
 
-}
-```
+now we can start programming function
+
