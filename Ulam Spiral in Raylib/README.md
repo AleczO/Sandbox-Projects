@@ -98,8 +98,8 @@ With this observation we can define two variables to track vertical and horizont
 ```c++
 int vertical = 2, horizontal = 2;
 ``` 
-<br>
+<br><br>
 
 
-now we can start programming function
+Let's start coding function.
 
