@@ -80,17 +80,18 @@ First let's look at the Ulam spiral and its mathematical relations
 
 ![Ulam spiral Relations](Resources/ulam-spiral-draw.png)
 
-<img src="Resources/ulam-spiral-draw.png" width="200"/>
+
+
+
+<br><br>
+
+
+Notice that each time we return to the vertical (or horizontal) line, its length is increased by 1 number.
 
 
 <br>
 
-
-Notice that each time we return to the vertical (or horizontal) line, its length increases by 1 number.
-
-
-<br><br><br>
-
+![Ulam spiral Relations](Resources/ulam-spiral-draw-with-relation.png)
 
 
 
