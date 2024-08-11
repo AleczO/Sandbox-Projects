@@ -41,7 +41,7 @@ The `Spiral` class will have 2 functions:
 void GenerateSpiral(/* variables */);
 ```
 
-Function used to generate spiral
+used to generate spiral
 
 
 <br>
@@ -50,17 +50,19 @@ Function used to generate spiral
 ```c++
 void DrawSpiral(void);
 ```
+used to draw spiral
 
-Function used to draw spiral
+
+
 
 <br><br><br>
 
 ## Part - II - Spiral Class
 
-To start programming our functions, we first need to understand __how Raylib displays pixels__.
+To start programming our functions, we first need to recall __how Raylib displays pixels__.
 
 
-![Raylib Window](Resources/raylib-coordinates.png)
+<img src="Resources/raylib-coordinates.png" alt="drawing" width="70%"/>
 
 There are two things to keep in mind:
 
@@ -78,7 +80,8 @@ This informations will be later important in programming functions.
 
 First let's look at the Ulam spiral and its mathematical relations
 
-![Ulam spiral Relations](Resources/ulam-spiral-draw.png)
+<img src="Resources/ulam-spiral-draw.png" alt="drawing" width="80%"/>
+
 
 
 
@@ -88,11 +91,7 @@ First let's look at the Ulam spiral and its mathematical relations
 
 Notice that each time we return to the vertical (or horizontal) line, its length is increased by 1 number.
 
-
-<br>
-
-![Ulam spiral Relations](Resources/ulam-spiral-draw-with-relation.png)
-
+<img src="Resources/ulam-spiral-draw-with-relation.png" alt="drawing" width="80%"/>
 
 
 ```c++
