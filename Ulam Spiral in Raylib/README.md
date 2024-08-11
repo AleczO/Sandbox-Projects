@@ -66,4 +66,16 @@ There are two things to keep in mind:
 1. Top left corner is $(0,0)$
 2. y coordinate is flipped
 
+<br>
+This informations will be later important in programming functions.
+
+<br><br><br>
+
+
+### GenerateSpiral Function Programming
+
+
+First let's look at the Ulam spiral and its mathematical relations
+
+![Ulam spiral Relations](Resources/ulam-spiral-relations.png)
 
