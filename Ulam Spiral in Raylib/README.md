@@ -1,9 +1,10 @@
 # Ulam Spiarl in Raylib - Tutorial
 
-
-## Part - I - Program Design
-
 ![Ulam Spiral](Resources/ulam-spiral.png)
+
+<br><br>
+
+## Part - I - Code Layout
 
 
 First we need to initialize our Raylib window. We can use the basic window template from [examples site](https://www.raylib.com/examples.html). To keep the main function clean i will initialize window in external function. I will also declare `screenWidth` and `screenHeight` as macros to access them more easily.
@@ -18,7 +19,7 @@ void Initialize(void){
 
 <br><br>
 
-After window initialization we can focus on our spiral design. In my case the spiral will be handled by __class__ called __Spiral__.
+After the window initialization design, we can focus on our spiral design.  In my case the spiral will be handled by __class__ called __Spiral__.
 
 
 ```c++
@@ -77,5 +78,26 @@ This informations will be later important in programming functions.
 
 First let's look at the Ulam spiral and its mathematical relations
 
-![Ulam spiral Relations](Resources/ulam-spiral-relations.png)
+![Ulam spiral Relations](Resources/ulam-spiral-draw.png)
 
+<img src="Resources/ulam-spiral-draw.png" width="200"/>
+
+
+<br>
+
+
+Notice that each time we return to the vertical (or horizontal) line, its length increases by 1 number.
+
+
+<br><br><br>
+
+
+
+
+```c++
+class Spiral{
+    private:
+
+
+}
+```
