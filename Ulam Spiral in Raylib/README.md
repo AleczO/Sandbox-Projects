@@ -6,7 +6,7 @@
 ![Ulam Spiral](Resources/ulam-spiral.png)
 
 
-First we need to initialize our Raylib window. We can use the basic window template from [examples site](https://www.raylib.com/examples.html). To keep the main function clean i will initialize window in external function. I will also declare `screenWidth` and `screenheight` as macros to access them more easily.
+First we need to initialize our Raylib window. We can use the basic window template from [examples site](https://www.raylib.com/examples.html). To keep the main function clean i will initialize window in external function. I will also declare `screenWidth` and `screenHeight` as macros to access them more easily.
 
 ```c++
 void Initialize(void){
@@ -18,7 +18,7 @@ void Initialize(void){
 
 <br><br>
 
-After creating window part we can focus on our spiral. In my case the spiral will be handled by __class__ called __Spiral__.
+After window initialization we can focus on our spiral design. In my case the spiral will be handled by __class__ called __Spiral__.
 
 
 ```c++
@@ -51,3 +51,19 @@ void DrawSpiral(void);
 ```
 
 Function used to draw spiral
+
+<br><br><br>
+
+## Part - II - Spiral Class
+
+To start programming our functions, we first need to understand __how Raylib displays pixels__.
+
+
+![Raylib Window](Resources/raylib-coordinates.png)
+
+There are two things to keep in mind:
+
+1. Top left corner is $(0,0)$
+2. y coordinate is flipped
+
+
