@@ -62,7 +62,7 @@ used to draw spiral
 To start programming our functions, we first need to recall __how Raylib displays pixels__.
 
 
-<img src="Resources/raylib-coordinates.png" alt="drawing" width="70%"/>
+<img src="Resources/raylib-coordinates.png" alt="drawing" width="30%"/>
 
 There are two things to keep in mind:
 
