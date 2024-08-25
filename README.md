@@ -1,2 +1,2 @@
-# Alecz0's Sandbox Projects
-This repository contains my projects listed on [this site](https://aleczo.github.io/).
+# Alecz0's Sandbox Projects Resources
+This repository contains my projects resources listed on [this site](https://aleczo.github.io/).
