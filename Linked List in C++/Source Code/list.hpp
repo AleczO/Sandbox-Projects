@@ -4,6 +4,7 @@
 #include <memory>
 #include <iostream>
 #include <string>
+#include <iterator>
 
 template <typename T> class List;
 
@@ -23,7 +24,7 @@ template <typename T> class List{
 public:
     // constructors
 
-    List();
+    List(void);
     List(std::initializer_list<T> L);
 
 
@@ -43,35 +44,56 @@ public:
     void PopFront(void);
     void Clear(void) noexcept;
 
+    bool Find(T element) const;
+
     void DisplayList(void) const;
+
 
     //______________________________________________________________________
 
+    //friend List<T> opeartor=(List&& Other){
+
+   //}
+
     friend bool operator==(const List& A, const List&B){
-        auto IteratorA = A.head,
-             IteratorB = B.head;
+        auto tempIteratorA = A.head,
+             tempIteratorB = B.head;
 
         while(true) {
+            if(tempIteratorA == nullptr && tempIteratorB != nullptr) return false;
+            if(tempIteratorA != nullptr && tempIteratorB == nullptr) return false;
+            if(tempIteratorA == nullptr && tempIteratorB == nullptr) return true;
+            if(tempIteratorA->value != tempIteratorB->value) return false;
             
-            if(IteratorA == nullptr && IteratorB != nullptr)
-                return false;
-
-            if(IteratorA != nullptr && IteratorB == nullptr)
-                return false;
-
-            if(IteratorA == nullptr && IteratorB == nullptr)
-                return true;
-            
-
-            if(IteratorA->value != IteratorB->value)
-                return false;
-            
-            IteratorA = IteratorA->next;
-            IteratorB = IteratorB->next;
+            tempIteratorA = tempIteratorA->next;
+            tempIteratorB = tempIteratorB->next;
         }
-
     }
+    
+    
+    struct Iterator: public std::iterator<std::input_iterator_tag, Node<T>> {
+    public:
+        Iterator(std::shared_ptr<Node<T>> ptr): ptr(ptr) {}
 
+        T& operator*() {return ptr->value; }
+        std::shared_ptr<Node<T>> operator->() { return ptr; }
+
+        Iterator& operator++() { ptr = ptr->next; return *this; }
+        Iterator operator++(T){ Iterator temp = *this; (*this)->next; return temp; }
+        
+        friend bool operator== (const Iterator& a, const Iterator& b) { return a.ptr == b.ptr; };
+        friend bool operator!= (const Iterator& a, const Iterator& b) { return a.ptr != b.ptr; }; 
+
+    private:
+        std::shared_ptr<Node<T>> ptr;
+    };
+
+
+
+    
+    Iterator begin() {return Iterator(head); };
+    Iterator end() {return Iterator(nullptr); };
+    
 
 private:
     std::shared_ptr<Node<T>> head;
@@ -85,7 +107,7 @@ private:
 //______________________________________________________________________
 
 
-template <typename T> List<T>::List() {
+template <typename T> List<T>::List(void) {
     head = nullptr;
 }
 
@@ -165,7 +187,6 @@ template<typename T> void List<T>::DisplayList(void) const{
 
 
 // ______________________________________________________________________
-
 
 
 #endif
