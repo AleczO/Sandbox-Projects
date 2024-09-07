@@ -46,7 +46,7 @@ public:
 
     bool Find(T element) const;
 
-    void DisplayList(void) const;
+    void Display(void) const;
 
 
     //______________________________________________________________________
@@ -175,7 +175,7 @@ template <typename T> void List<T>::Clear(void) noexcept {
 // ______________________________________________________________________
 
 
-template<typename T> void List<T>::DisplayList(void) const{
+template<typename T> void List<T>::Display(void) const{
     auto iter = head;
     while(iter != nullptr){
         std::cout << iter->value << ' ';

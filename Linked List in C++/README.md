@@ -29,11 +29,11 @@
 
 ### Modifiers
 
-Clear
+[Clear](#clear)
 
-PushFront
+[PushFront](#pushfront)
 
-PopFront
+[PopFront](#popfront)
 
 
 <br>
@@ -71,7 +71,7 @@ int main(){
     List<std::string> L2 = {"Hello", "There", "General"};
     
     cout << "L2: ";
-    L2.DisplayList();
+    L2.Display();
 }
 ```
 
@@ -181,14 +181,14 @@ Now list has element, thus returns 0
 <summary> </summary>
 
 ```c++
-bool Empty() const noexcept;
+uint32_t Size(void) const noexcept;
 ```
 
-Checks if the container is empty, `head = nullptr`
+Returns the count of element in the container
 
 ##### Return value
 
-`true` if contanier empty, `false` otherwise.
+number of elements in container
 <br>
 
 
@@ -201,22 +201,141 @@ Checks if the container is empty, `head = nullptr`
 int main(){
     List<int> Example;
 
-    std::cout << "List is initially empty thus, Example.Empty() returns " << Example.Empty() << '\n';
+    std::cout << Example.Size() << '\n';
 
     Example.PushFront(10);
+    Example.PushFront(20);
+    Example.PushFront(30);
 
-    std::cout << "Now list has element, thus returns " << Example.Empty() << '\n';
+    std::cout << Example.Size() << '\n';
 
-    return 0;
+    Example.PopFront();
+
+    std::cout << Example.Size() << '\n';
 }
 ```
 
 ##### Output
 
 ```
-List is initially empty thus, Example.Empty() returns 1
-Now list has element, thus returns 0
+0
+3
+2
 ```
 </details>
 
-#### Temp
+#### Clear
+
+<details>
+<summary> </summary>
+
+```c++
+void Clear(void) noexcept;
+```
+
+Erases all elemetns from the container, sets `Size()` to `0`
+
+##### Example
+```c++
+#include <iostream>
+#include "list.hpp"
+
+int main() {
+    List<int> Example{1,2,3};
+
+    Example.Display();
+
+    Example.Clear();
+    Example.Display();
+
+    std::cout << Example.Size() << '\n';
+}
+
+```
+##### Answer
+
+```
+1 2 3 
+
+0
+```
+
+</details>
+
+#### PushFront
+
+<details>
+
+<summary> </summary>
+
+```c++
+void PushFront(const T element);
+```
+
+inserts an element to the beginning
+
+##### Parameters
+
+value - the value of the element to add
+
+##### Example
+
+
+
+```c++
+#include <iostream>
+#include "list.hpp"
+
+int main() {
+    List<int> Example{1,2,3};
+
+    Example.Display();
+
+    Example.PushFront(1);
+
+    Example.Display();
+
+}
+```
+
+</details>
+
+#### PopFront
+
+<details>
+<summary> </summary>
+
+```c++
+void PopFront(void);
+```
+
+Removes the first element of the container. If there are no elements throws error.
+
+##### Example
+
+```c++
+#include <iostream>
+#include "list.hpp"
+
+
+int main() {
+    List<int> Example{1,2,3};
+
+    Example.Display();
+
+    Example.PopFront();
+
+    Example.Display();
+}
+```
+
+##### Output
+
+```
+1 2 3 
+2 3
+```
+
+
+
+</details>

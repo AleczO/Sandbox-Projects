@@ -3,13 +3,11 @@
 
 
 int main() {
-    List<int> Example;
+    List<int> Example{1,2,3};
 
-    std::cout << "List is initially empty thus, Example.Empty() returns " << Example.Empty() << '\n';
+    Example.Display();
 
-    Example.PushFront(10);
+    Example.PopFront();
 
-    std::cout << "Now list has element " << Example.Empty() << '\n';
-
-    return 0;
+    Example.Display();
 }
