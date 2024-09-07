@@ -10,6 +10,7 @@
 
 <details> 
 <summary> (constructor) </summary>
+<br>
 
  
 ```c++
@@ -35,6 +36,7 @@ int main(){
     // Initializer list constructor
     List<std::string> L2 = {"Hello", "There", "General"};
     
+    std::cout << "L2 - " 
     L2.DisplayList();
 }
 ```
@@ -42,16 +44,29 @@ int main(){
 #### Output
 
 ```
-
+    L2
 ```
 
 
 
 <br>
 </details>
+<br>
 
-(destructor)
+<details>
+<summary> (destructor) </summary>
 
+<br>
+
+```c++
+~List()
+```
+
+List destructor. Clears the list elements and deallocates memory used by it.
+
+</details>
+
+<br>
 
 ### Element Access
 
