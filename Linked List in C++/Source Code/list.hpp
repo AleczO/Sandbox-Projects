@@ -24,7 +24,7 @@ template <typename T> class List{
 public:
     // constructors
 
-    List();
+    List(void);
     List(std::initializer_list<T> L);
 
 
@@ -71,7 +71,7 @@ public:
     }
     
     
-    struct Iterator: public std::iterator<std::input_iterator_tag, Node<T>> {
+    struct Iterator {
     public:
         Iterator(std::shared_ptr<Node<T>> ptr): ptr(ptr) {}
 
@@ -111,8 +111,8 @@ template <typename T> List<T>::List(void) {
 }
 
 template <typename T> List<T>::List(std::initializer_list<T> L) {
-    for(auto Iterator: L)
-        PushFront(Iterator);
+    for(auto iter = std::rbegin(L); iter != std::rend(L); ++iter )
+        PushFront(*iter);
 }
 
 
@@ -176,10 +176,10 @@ template <typename T> void List<T>::Clear(void) noexcept {
 
 
 template<typename T> void List<T>::DisplayList(void) const{
-    auto Iterator = head;
-    while(Iterator != nullptr){
-        std::cout << Iterator->value << ' ';
-        Iterator = Iterator->next;
+    auto iter = head;
+    while(iter != nullptr){
+        std::cout << iter->value << ' ';
+        iter = iter->next;
     }
     std::cout << std::endl;
 }

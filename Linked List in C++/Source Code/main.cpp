@@ -3,26 +3,13 @@
 
 
 int main() {
-    List<int> A;
-    List<int> B({1,2,3,4});
-    List<std::string> C{"Hello", "There"};
+    List<int> Example;
 
-    A.PopFront();
+    std::cout << "List is initially empty thus, Example.Empty() returns " << Example.Empty() << '\n';
 
-    A.PushFront(5);
-    A.PushFront(23);
- 
-    B.PushFront(5);
-    B.PushFront(23);
-    B.PushFront(2);
+    Example.PushFront(10);
 
-
-    std::cout << (B == A) << '\n';
-
-    B.DisplayList();
-    C.DisplayList();
-    
-    std::cout << A.Size() << '\n';
+    std::cout << "Now list has element " << Example.Empty() << '\n';
 
     return 0;
 }
