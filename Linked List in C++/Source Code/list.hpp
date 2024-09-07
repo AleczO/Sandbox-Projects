@@ -24,7 +24,7 @@ template <typename T> class List{
 public:
     // constructors
 
-    List(void);
+    List();
     List(std::initializer_list<T> L);
 
 
@@ -87,7 +87,6 @@ public:
     private:
         std::shared_ptr<Node<T>> ptr;
     };
-
 
 
     
