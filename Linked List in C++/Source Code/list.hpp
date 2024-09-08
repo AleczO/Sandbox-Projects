@@ -22,7 +22,6 @@ private:
 
 template <typename T> class List{
 public:
-    // constructors
 
     List(void);
     List(std::initializer_list<T> L);
@@ -34,19 +33,24 @@ public:
 
     // ____________________________________________________________________
 
+    const T& Front() const;
+
+    // ____________________________________________________________________
+
+
     bool Empty(void) const noexcept;
     uint32_t Size(void) const noexcept;
 
-    const T& Front() const;
+    // ____________________________________________________________________
 
     void PushFront(const T element);
     void PopFront(void);
     void Clear(void) noexcept;
 
+    // ____________________________________________________________________
+
     bool Find(T element) const;
-
     void Display(void) const;
-
 
     //______________________________________________________________________
     
@@ -116,9 +120,14 @@ template <typename T> List<T>::List(std::initializer_list<T> L) {
         PushFront(*iter);
 }
 
-
 template <typename T> List<T>::~List(){
     Clear();
+}
+
+// ______________________________________________________________________
+
+template <typename T> const T& List<T>::Front(void) const{
+    return head->value;
 }
 
 
@@ -131,14 +140,6 @@ template <typename T> bool List<T>::Empty(void) const noexcept{
 
 template <typename T> uint32_t List<T>::Size(void) const noexcept{
     return size;
-}
-
-
-// ______________________________________________________________________
-
-
-template <typename T> const T& List<T>::Front(void) const{
-    return head->value;
 }
 
 
