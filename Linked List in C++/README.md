@@ -8,7 +8,7 @@
 
 
 
-### Member functions
+## Member functions
 
 [(constructor)](#constructor)
 
@@ -18,6 +18,10 @@
 ### Element Access
 
 [Front](#front)
+
+### Iterators
+
+[begin - cbegin](#begin---cbegin--iterator)
 
 
 ### Capacity
@@ -85,7 +89,7 @@ int main(){
 <br>
 </details>
 
-#### desturctor
+#### destructor
 
 
 <details>
@@ -130,6 +134,47 @@ int main(){
 ```
 
 </details>
+
+#### begin - cbegin  Iterator
+
+```c++
+1. iterator begin();
+```
+
+```c++
+2. const_iterator cbegin() const;
+```
+
+Returns an iterator to the first element of the list;
+
+##### Retrn value
+Iterator to the first element.
+
+##### Example
+
+```c++
+#include <iostream>
+#include "list.hpp"
+
+int main() {
+    List<int> Example{1,2,3,6};
+    
+    for(auto it: Example)
+        std::cout << it << ' ';
+    std::cout << '\n';
+
+    std::cout << std::accumulate(Example.begin(), Example.end(), 0) << '\n';
+}
+```
+
+##### Output
+```
+1 2 3 6
+12
+```
+
+
+#### end - cend Iterator
 
 #### Empty
 
@@ -339,3 +384,5 @@ int main() {
 
 
 </details>
+
+
