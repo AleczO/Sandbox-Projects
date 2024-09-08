@@ -28,8 +28,6 @@ public:
 
     ~List();
 
-    //List<T>& operator=(List<T>&& other);
-
 
     // ____________________________________________________________________
 
@@ -201,11 +199,11 @@ template<typename T> bool operator==(const List<T>& lhs,const List<T>& rhs) {
 
         if(*lhsIter != *rhsIter) return false;
 
-        lhsIter++;
-        rhsIter++;
+        ++lhsIter;
+        ++rhsIter;
     }
     
-    //return 0;
+    return 0;
 }
 
 
