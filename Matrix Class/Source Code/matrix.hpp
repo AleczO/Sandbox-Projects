@@ -28,7 +28,7 @@ public:
     // ___________________________________________________
 
     
-    friend bool operator==(Matrix<T> const& A, Matrix<T> const& B){ 
+    friend bool operator==(Matrix<T> const& A, Matrix<T> const& B){
         return (A.matrix == B.matrix);
     }
 
