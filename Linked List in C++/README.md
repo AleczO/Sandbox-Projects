@@ -58,11 +58,11 @@
 <summary>  </summary>
 
  
-```c++
+```C++
 1. List();
 ```
 
-```c++
+```C++
 2. List(std::initializer_list<T> L);
 ```
 
